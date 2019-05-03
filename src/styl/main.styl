@@ -1,0 +1,74 @@
+// @require '~normalize.css'
+
+@require 'other/media'
+@require 'other/font'
+
+@require 'blocks/r'
+
+@require 'blocks/header'
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  outline-width: 0px !important;
+  outline-color: none !important;
+  -webkit-appearance: none;
+  color: #000;
+  box-sizing: border-box !important;
+  text-decoration-skip-ink: none;
+
+  &:focus {
+    outline-style: none;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #383c45;
+  background: #fff;
+  min-width: 1180px;
+}
+
+section
+header
+footer
+  width 100%
+
+  .container
+    width 1240px
+    padding-left 30px
+    padding-right 30px
+    margin 0 auto
+
+.center
+  text-align center
+
+
+.btn-decor
+  height 64px;
+  display inline-flex
+  justify-content center
+  align-items center
+  text-align center
+  border none
+  background-color #ffdc17
+  text-transform uppercase
+  text-decoration none
+  box-shadow 7px 7px 0px 0px #d3b612
+  font 18px RCB
+  letter-spacing: .03em;
+  color #383c45
+  cursor pointer
