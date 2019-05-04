@@ -1,0 +1,20 @@
+- console.log($)
+
+block includes
+  section.includes
+    .container.includes__container
+      .title.includes__title В любой наш дизайн-проект входит
+      .includes__list
+        each val, index in $["INC"]
+          .includes__item.includes-item
+            .includes-item__title
+              = val.name
+            .includes-item__desc
+              = val.desc
+            .includes-item__items.includes-sublist
+              each item, index2 in val.items
+                .includes-sublist__item
+                  span 0#{parseInt(index2+1)}.
+                  |
+                  | #{item}
+
