@@ -1,0 +1,17 @@
+block prices
+  section.prices
+    .container.prices__container
+      .title.prices__title фиксированные цены
+      .prices__list
+        each val, index in $["PRICES"]
+          - let url = "/upload/prices/"+(index+1)+".jpg"
+          .prices__item.prices-item
+            img(src=url)
+            .prices-item__inner
+              .prices-item__name
+                = val.name
+              .prices-item__price
+                = val.price
+                |
+                | руб.#{val.perfloor ? '/этаж' : ''}
+              .prices-item__btn Заказать
