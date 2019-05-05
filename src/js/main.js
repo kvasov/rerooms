@@ -1,37 +1,39 @@
 import 'babel-polyfill';
 
+require('./placeholder.js');
+require('./reviews.js');
+
 $(document).ready(() => {
-  const $inputItem = $('.js-inputWrapper');
-  if ($inputItem.length) {
-    $inputItem.each(function () {
-      let $this = $(this),
-        $input = $this.find('.form-row__input'),
-        placeholderTxt = $input.attr('placeholder'),
-        $placeholder;
-
-      $input.after(`<span class="placeholder">${placeholderTxt}</span>`),
-      $input.attr('placeholder', ''),
-      ($placeholder = $this.find('.placeholder')),
-      $input.val().length ? $this.addClass('active') : $this.removeClass('active'),
-      $input
-        .on('focusout', () => {
-          $input.val().length ? $this.addClass('active') : $this.removeClass('active');
-        })
-        .on('focus', () => {
-          $this.addClass('active');
-        });
-    });
-  }
-
-  $('.js-reviews-more').click(function () {
-    $('.reviews__list .reviews-item:hidden:lt(2)').css({
-      display: 'block'
-    });
-
+  const phoneInput = $('.js-phone');
+  phoneInput.on('keydown', function (event) {
     if (
-      $('.reviews__list .reviews-item').length == $('.reviews__list .reviews-item:visible').length
+      !(
+        event.key == 'ArrowLeft' ||
+        event.key == 'ArrowRight' ||
+        event.key == 'Backspace' ||
+        event.key == 'Tab'
+      )
     ) {
-      $(this).remove();
+      event.preventDefault();
+    }
+    const mask = '+7 (111) 111-11-11';
+
+    if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+      let currentString = this.value;
+      const currentLength = currentString.length;
+      if (/[0-9]/.test(event.key)) {
+        if (mask[currentLength] == '1') {
+          this.value = currentString + event.key;
+        } else {
+          for (let i = currentLength; i < mask.length; i++) {
+            if (mask[i] == '1') {
+              this.value = currentString + event.key;
+              break;
+            }
+            currentString += mask[i];
+          }
+        }
+      }
     }
   });
 });
