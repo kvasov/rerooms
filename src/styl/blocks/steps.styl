@@ -1,0 +1,68 @@
+.steps
+  padding 160px 0 144px
+  background-color #fff
+
+  &__title
+    margin-bottom 7px
+
+  &__footnote
+    margin-bottom 62px
+    font 14px 'RCR'
+    color #8d9aa8
+    text-align center
+    letter-spacing .003em
+
+  &__list
+    display flex
+    justify-content space-between
+    align-items flex-start
+    flex-flow row wrap
+
+.steps-item
+  flex calc((100% - 40px) / 3) 0 0
+  padding 0
+  margin 0 0 16px
+
+  &__num
+    position relative
+    font 44px 'RCB'
+    color #828f9e
+
+    &::before,
+    &::after
+      content ''
+      display block
+      position absolute
+
+    &::before
+      right 0
+      top 25px
+      width calc(100% - 74px)
+      height 1px
+      border-top 1px solid #dddedf
+
+    &::after
+      left 56px
+      top 22px
+      width 8px
+      height 8px
+      background #31353c
+
+  &__date
+    margin 16px 0
+    font 16px 'RCB'
+    text-transform uppercase
+    letter-spacing .05em
+    color textColor
+
+  &__name
+    margin 0 0 10px
+    font 24px 'RCR'
+    color textColor
+
+  &__desc
+    margin 0 0 30px
+    padding-right 100px
+    font 16px/24px 'RCL'
+    color #8d9aa8
+    letter-spacing .01em
