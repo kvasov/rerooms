@@ -1,0 +1,11 @@
+block arguments
+  section.arguments
+    .container.arguments__container
+      .title.arguments__title Три аргумента, чтобы заказать дизайн-проект
+      .arguments__list
+        each val, index in $["ARGUMENTS"]
+          .arguments__item.arguments-item
+            .arguments-item__title
+              = val.name
+            .arguments-item__desc
+              = val.desc
