@@ -1,0 +1,101 @@
+.reviews
+  padding 80px 0 87px
+  background-color #f3f5f5
+
+  &__title
+    margin-bottom 57px
+
+  &__list
+    display flex
+    flex-flow row wrap
+    justify-content flex-start
+
+  &__more
+    position relative
+    display inline-block
+    margin 36px 0 0
+    text-decoration none
+    background #f3f5f5
+    z-index 2
+    cursor pointer
+
+    &::before
+      content ''
+      display block
+      position absolute
+      top 7px
+      left 7px
+      right -7px
+      bottom -7px
+      border 1px solid rgba(206,213,221,0.5)
+      z-index -1
+      background #f3f5f5
+
+    &::after
+      content ''
+      display block
+      position absolute
+      top 7px
+      left 7px
+      right -3px
+      bottom -3px
+      z-index -1
+      background #f3f5f5
+
+    .in
+      height: 64px
+      font: 18px 'RCR'
+      letter-spacing .03em
+      text-transform: uppercase
+      padding: 21px 39px 0 88px
+      text-decoration: none
+      color: #31353c
+      border: 1px solid #cfd6dd
+      background: #f3f5f5
+      background-image: url('~@/img/reload.svg')
+      background-size: 28px 30px
+      background-position: left 39px center
+      background-repeat: no-repeat
+
+.reviews-item
+  display none
+  position relative
+  width 580px
+  margin-right 20px
+  margin-bottom 20px
+  padding 56px 40px 39px 40px
+  background #fff
+
+  &:nth-child(1),
+  &:nth-child(2)
+    display block
+
+  &:nth-child(2n+2)
+    margin-right 0
+
+  &::after
+    content ''
+    display block
+    position absolute
+    top 40px
+    right 33px
+    width 35px
+    height 30px
+    background url('~@/img/quote.svg')
+    background-size cover
+
+  &__name
+    display inline-block
+    font 24px 'RCR'
+    color textColor
+
+  &__city
+    display inline-block
+    margin-left 5px
+    font 16px 'RCR'
+    color #8d9aa8
+
+  &__text
+    margin-top 25px
+    font 16px/24px 'RCR'
+    color textColor

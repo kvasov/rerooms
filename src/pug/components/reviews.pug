@@ -1,0 +1,17 @@
+block reviews
+  section.reviews
+    .container.reviews__container
+      .title.reviews__title Отзывы наших клиентов
+      .reviews__list
+        each val, index in $["REVIEWS"]
+          .reviews__item.reviews-item
+            .reviews-item__name
+              = val.name
+            .reviews-item__city
+              | /
+              = val.city
+            .reviews-item__text
+              = val.text
+      .center
+        .reviews__more.js-reviews-more
+          .in Загрузить еще отзывы
