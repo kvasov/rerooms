@@ -1,0 +1,154 @@
+.form
+  position relative
+  width 401px
+  background-color #fff
+  box-shadow 10px 10px rgba(255, 255, 255, .2)
+  padding 48px 40px 52px
+
+  &__title
+    margin-bottom 4px
+    font 30px 'RCB'
+    text-transform uppercase
+    color textColor
+    text-align center
+
+  &__subtitle
+    margin-bottom 35px
+    font 16px 'RCR'
+    color textColor
+    text-align center
+
+  &__btn
+    width calc(100% - 7px)
+
+  &__checkbox
+    margin 13px 0 9px
+
+    input
+      display none
+
+    input + label
+      position relative
+      font 11px 'RCR'
+      color #8d9aa8
+      padding 2px 0 0 24px
+
+      &::before
+        content ''
+        display block
+        position absolute
+        top 0
+        left 0
+        width 16px
+        height 16px
+        background-color #e1e6eb
+
+    input:checked + label::before
+      background-image url('~@/img/checkbox.svg')
+      background-position center
+      background-size 12px 9px
+      background-repeat no-repeat
+
+  &__note
+    font 11px/15px 'RCR'
+    color #8d9aa8
+
+  &__success
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-color textColor
+
+.form-row
+  position relative
+  margin-bottom 20px
+  width 100%
+  height 64px
+  border 1px solid #e1e6eb
+
+  &__input
+    position relative
+    height 62px
+    width 100%
+    border none
+    padding 17px 15px 0
+    font 16px 'RCR'
+    color textColor
+    outline none
+    transition all .2s ease
+
+  &__wrapper
+    position relative
+    display block
+    width 100%
+
+    &.active
+      .placeholder
+        top 12px
+        font-size 12px
+        transform translateY(0)
+
+  .placeholder
+    display block
+    position absolute
+    top 50%
+    left 10px
+    padding-left 6px
+    color #8d9aa8
+    font 16px 'RCL'
+    transition all .2s ease
+    transform translateY(-50%)
+    pointer-events none
+    user-select none
+
+
+.form-success
+  display none
+  padding 190px 0 0
+
+  &__close
+    position absolute
+    top 24px
+    right 24px
+    width 18px
+    height 18px
+    background-image url('~@/img/close.svg')
+    background-size 18px
+    background-repeat no-repeat
+    cursor pointer
+
+  &__title
+    position relative
+    margin-bottom 16px
+    padding 80px 0 0
+    font 24px/32px 'RCB'
+    text-transform uppercase
+    color #fff
+    text-align center
+
+    &::after
+      content ''
+      display block
+      position absolute
+      top 0
+      left 50%
+      transform translateX(-50%)
+      width 53px
+      height 53px
+      border 3px solid #fff
+      border-radius 50%
+      background-image url('~@/img/ok-arrow.svg')
+      background-size 28px 21px
+      background-repeat no-repeat
+      background-position center
+
+
+  &__subtitle
+    font 16px/24px 'RCR'
+    color #fff
+    text-align center
+
+  &_active
+    display block

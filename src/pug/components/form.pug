@@ -1,0 +1,35 @@
+mixin form(name)
+  - id = name
+  .form
+    .form__title Оставьте заявку
+    .form__subtitle И мы свяжемся с вами в ближайшее время!
+
+    .form__row.form-row
+      label(class="form-row__wrapper js-inputWrapper")
+        input(type="text" class="form-row__input js-input" placeholder="Ваше имя")
+
+    .form__row.form-row
+      label(class="form-row__wrapper js-inputWrapper")
+        input(type="text" class="form-row__input js-input" placeholder="Номер телефона")
+
+    .form__row.form-row
+      label(class="form-row__wrapper js-inputWrapper")
+        input(type="text" class="form-row__input js-input" placeholder="E-mail")
+
+    .form__btn.btn-decor Заказать дизайн-проект
+
+    .form__checkbox
+      input(type="checkbox" id=id checked)
+      label(for=id) Даю согласие на отправку мне информационных данных
+
+    .form__note
+      | Нажимая на кнопку «Заказать дизайн-проект», я даю согласие на обработку персональных данных в соответствии  с
+      |
+      a(href="#") «Политикой в области обработки и защиты персональных данных»
+
+    .form__success.form-success
+      .form-success__close.js-form-close
+      .form-success__title Благодарим вас<br /> за сообщение
+      .form-success__subtitle В ближайшее время наш специалист<br /> свяжется с вами для уточнения заказа
+
+
