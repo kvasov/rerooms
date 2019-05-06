@@ -8,9 +8,10 @@ mixin form(name)
       label(class="form-row__wrapper js-inputWrapper")
         input(type="text" class="form-row__input js-input" placeholder="Ваше имя")
 
-    .form__row.form-row
+    .form__row.form-row.form-row_error
       label(class="form-row__wrapper js-inputWrapper")
         input(type="text" class="form-row__input js-input js-phone" placeholder="Номер телефона")
+      .form-row__error Заполните телефон
 
     .form__row.form-row
       label(class="form-row__wrapper js-inputWrapper")

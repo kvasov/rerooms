@@ -36,4 +36,28 @@ $(document).ready(() => {
       }
     }
   });
+
+  if ($(`[name=${location.hash.split('#')[1]}]`).length) {
+    $('html, body').animate(
+      {
+        scrollTop: $(`[name=${location.hash.split('#')[1]}]`).offset().top
+      },
+      1000
+    );
+  }
+
+  $('a[href^="#"]').click(function () {
+    const elementName = $(this)
+      .attr('href')
+      .split('#')[1];
+
+    if ($(`[name=${elementName}]`).length) {
+      $('html, body').animate(
+        {
+          scrollTop: $(`[name=${elementName}]`).offset().top
+        },
+        1000
+      );
+    }
+  });
 });
