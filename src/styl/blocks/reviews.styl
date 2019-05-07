@@ -57,6 +57,10 @@
       background-position: left 39px center
       background-repeat: no-repeat
 
+      span
+        font: 18px 'RCR'
+        color: #31353c
+
 .reviews-item
   display none
   position relative
@@ -118,3 +122,36 @@
     width 100%
     margin-right 0
     padding 56px 40px 67px 40px
+
++media767()
+  .reviews
+    padding 40px 0 80px
+
+    &__title
+      margin-bottom 30px
+
+    &__more
+      .in
+        span
+          display none
+
+  .reviews-item
+    margin-bottom 24px
+    padding 22px 20px 32px
+
+    &::after
+      top 24px
+      right 20px
+
+    &__name
+      display block
+      font 20px 'RCR'
+
+    &__city
+      display block
+      margin-left 0
+      margin-top 6px
+
+    &__text
+      margin-top 19px
+      font 16px/22px 'RCR'

@@ -18,6 +18,9 @@
     color textColor
     text-align center
 
+    br
+      display none
+
   &__btn
     width calc(100% - 7px)
 
@@ -160,3 +163,47 @@
 
   &_active
     display block
+
++media767()
+  .form
+    width 100%
+    box-shadow none
+    padding 30px 20px
+
+    &__title
+      margin-bottom 4px
+      font 20px 'RCB'
+
+    &__subtitle
+      margin-bottom 21px
+      font 16px/20px 'RCR'
+
+      br
+        display inline
+
+  .form-row
+    margin-bottom 16px
+    height 48px
+
+    &__input
+      height 46px
+      padding 11px 12px 0
+
+    &__wrapper
+      &.active
+        .placeholder
+          top 4px
+          left 5px
+
+    .placeholder
+      top 50%
+      left 10px
+
+    &_error
+      margin-bottom 36px
+
+    &__error
+      margin-top 6px
+
+  .form-success
+    padding 160px 0 0

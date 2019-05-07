@@ -102,3 +102,54 @@
   .steps-item
     flex calc((100% - 20px) / 2) 0 0
     margin 0 0 21px
+
++media767()
+  .steps
+    padding 80px 0 40px
+
+    &__footnote
+      margin-bottom 26px
+
+      br
+        display none
+
+  .steps-item
+    position relative
+    flex 100% 0 0
+    margin 0 0 21px
+
+    &::before
+      content ''
+      display block
+      position absolute
+      left 15px
+      top 70px
+      width 1px
+      height calc(100% - 66px)
+      border-top none
+      border-left 1px solid #dddedf
+
+    &__num
+      display inline-block
+      font 30px 'RCB'
+
+      &::before
+        display none
+
+      &::after
+        left 11px
+        top 49px
+
+    &__date
+      display inline-block
+      position relative
+      top -4px
+      margin 0 0 0 6px
+
+    &__name
+      margin 5px 0 13px 40px
+
+    &__desc
+      margin 0 0 30px 40px
+      padding-right 0
+      font 16px/22px 'RCL'

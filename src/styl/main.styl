@@ -31,6 +31,7 @@
 
 body
   position relative
+  min-width 320px
   height 100%
   width 100%
   color #383c45
@@ -65,6 +66,15 @@ footer
       padding-left 35px
       padding-right 35px
 
++media767()
+  section
+  header
+  footer
+    .container
+      min-width 320px
+      padding-left 15px
+      padding-right 15px
+
 .center
   text-align center
 
@@ -91,3 +101,7 @@ footer
   text-transform uppercase
   text-align center
   color textColor
+
++media767()
+  .title
+    font: 24px/32px 'RCB'

@@ -58,7 +58,7 @@
 
 +media1023()
   .arguments
-    padding 80px 0 32px
+    padding 80px 0 40px
 
     &__list
       flex-flow row wrap
@@ -70,3 +70,35 @@
     &:nth-child(2)
     &:nth-child(3)
       flex 50% 0 0
+
+
++media767()
+  .arguments
+    padding 80px 0 64px
+
+    &__title
+      margin-bottom 34px
+
+    &__list
+      flex-flow row wrap
+
+  .arguments-item
+    padding 95px 0 0 0
+    margin-bottom 16px
+
+    &__title
+      margin-bottom 16px
+      font 20px 'RCB'
+
+    &__desc
+      margin-bottom 25px
+      font 16px/24px 'RCR'
+
+    &:nth-child(1)
+      flex 100% 0 0
+
+    &:nth-child(2)
+      flex 100% 0 0
+
+    &:nth-child(3)
+      flex 100% 0 0
