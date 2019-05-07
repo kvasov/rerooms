@@ -91,3 +91,29 @@
         font 34px 'RCB'
         color textColor
         text-transform none
+
++media1023()
+  .prices
+    padding 64px 0 50px
+
+    &__list
+      width 700px
+
+  .prices-item
+    flex 340px 0 0
+    height 425px
+
+    &:nth-child(odd)
+      margin-right 20px
+
+    &:nth-child(even)
+      margin-right 0
+
+    img
+      height 199px
+
+    &__price
+      font 32px 'RCB'
+
+      span
+        font 32px 'RCB'

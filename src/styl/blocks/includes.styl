@@ -47,10 +47,9 @@
     font 20px 'RCR'
     color #8d9aa8
 
-
 +media1279()
   .includes
-    padding 82px 0 80px
+    padding 80px 0
 
     &__list
       display flex
@@ -58,3 +57,14 @@
 
   .includes-item
     padding 104px 20px 0 0
+
++media1023()
+  .includes
+    &__list
+      justify-content flex-start
+      flex-flow row wrap
+
+  .includes-item
+    max-width 50%
+    margin-bottom 40px
+    padding 104px 60px 0 0
