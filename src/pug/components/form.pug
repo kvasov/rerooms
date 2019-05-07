@@ -6,18 +6,19 @@ mixin form(name)
 
     .form__row.form-row
       label(class="form-row__wrapper js-inputWrapper")
-        input(type="text" class="form-row__input js-input" placeholder="Ваше имя")
-
-    .form__row.form-row.form-row_error
-      label(class="form-row__wrapper js-inputWrapper")
-        input(type="text" class="form-row__input js-input js-phone" placeholder="Номер телефона")
-      .form-row__error Заполните телефон
+        input(type="text" class="form-row__input js-input js-name" placeholder="Ваше имя")
 
     .form__row.form-row
       label(class="form-row__wrapper js-inputWrapper")
-        input(type="text" class="form-row__input js-input" placeholder="E-mail")
+        input(type="text" class="form-row__input js-input js-phone" placeholder="Номер телефона")
+      .form-row__error.js-error-phone Заполните телефон
 
-    .form__btn.btn-decor Заказать дизайн-проект
+    .form__row.form-row
+      label(class="form-row__wrapper js-inputWrapper")
+        input(type="text" class="form-row__input js-input js-email" placeholder="E-mail")
+      .form-row__error.js-error-email Неверный email
+
+    .form__btn.btn-decor.js-form-submit Заказать дизайн-проект
 
     .form__checkbox
       input(type="checkbox" id=id checked)

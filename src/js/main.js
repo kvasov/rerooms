@@ -60,4 +60,55 @@ $(document).ready(() => {
       );
     }
   });
+
+  $('.js-form-submit').on('click', function () {
+    let error = false;
+
+    const $form = $(this).parents('.form');
+    const $name = $form.find('.js-name');
+    const $phone = $form.find('.js-phone');
+    const $email = $form.find('.js-email');
+    const $formSuccess = $form.find('.form-success');
+
+    $('.js-error-phone, .js-error-email').hide();
+    $form.find('.form-row').removeClass('form-row_error');
+
+    if (!/^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test($phone.val())) {
+      error = true;
+      $form.find('.js-error-phone').show();
+      $form
+        .find('.js-error-phone')
+        .parent()
+        .addClass('form-row_error');
+    }
+
+    if ($email.val() != '' && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($email.val())) {
+      error = true;
+      $form.find('.js-error-email').show();
+      $form
+        .find('.js-error-email')
+        .parent()
+        .addClass('form-row_error');
+    }
+
+    if (!error) {
+      $formSuccess.show();
+    }
+  });
+
+  $('.js-form-close').on('click', function () {
+    const $form = $(this).parents('.form');
+    const $name = $form.find('.js-name');
+    const $phone = $form.find('.js-phone');
+    const $email = $form.find('.js-email');
+    const $formSuccess = $form.find('.form-success');
+
+    $name.val('');
+    $phone.val('');
+    $email.val('');
+
+    $formSuccess.hide();
+
+    $form.find('input').trigger('focusout');
+  });
 });
