@@ -13,39 +13,28 @@
 @require 'blocks/reviews'
 @require 'blocks/order'
 
-* {
-  font-family: 'RCR', sans-serif;
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0;
-  outline-width: 0px !important;
-  outline-color: none !important;
-  -webkit-appearance: none;
-  color: #000;
-  box-sizing: border-box !important;
-  text-decoration-skip-ink: none;
+*
+  font-family 'RCR', sans-serif
+  margin 0
+  padding 0
+  letter-spacing 0
+  outline-width 0px !important
+  outline-color none !important
+  -webkit-appearance none
+  color #000
+  box-sizing border-box !important
+  text-decoration-skip-ink none
 
-  &:focus {
-    outline-style: none;
-  }
-}
+  &:focus
+    outline-style none
 
-.hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
 
-body {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #383c45;
-  background: #fff;
-  min-width: 1180px;
-}
+body
+  position relative
+  height 100%
+  width 100%
+  color #383c45
+  background #fff
 
 section
 header
@@ -57,6 +46,15 @@ footer
     padding-left 30px
     padding-right 30px
     margin 0 auto
+
++media1279()
+  section
+  header
+  footer
+    .container
+      width 100%
+      padding-left 40px
+      padding-right 40px
 
 .center
   text-align center

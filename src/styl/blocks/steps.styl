@@ -5,12 +5,18 @@
   &__title
     margin-bottom 7px
 
+    br
+      display none
+
   &__footnote
     margin-bottom 62px
-    font 14px 'RCR'
+    font 14px/20px 'RCR'
     color #8d9aa8
     text-align center
     letter-spacing .003em
+
+    br
+      display none
 
   &__list
     display flex
@@ -66,3 +72,25 @@
     font 16px/24px 'RCL'
     color #8d9aa8
     letter-spacing .01em
+
+
++media1279()
+  .steps
+    padding 80px 0 34px
+    background-color #fff
+
+    &__title
+      margin-bottom 17px
+
+      br
+        display inline
+
+    &__footnote
+      margin-bottom 62px
+
+      br
+        display inline
+
+  .steps-item
+    &__desc
+      padding-right 60px

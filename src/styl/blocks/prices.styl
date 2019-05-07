@@ -43,6 +43,11 @@
     color textColor
     text-transform uppercase
 
+    span
+      font 32px 'RCB'
+      color textColor
+      text-transform uppercase
+
   &__btn
     display flex
     justify-content center
@@ -55,3 +60,34 @@
     color textColor
     text-transform uppercase
     cursor pointer
+
++media1279()
+  .prices
+    padding 86px 0 50px
+
+    &__title
+      margin-bottom 73px
+
+    &__list
+      width 940px
+      margin 0 auto
+
+  .prices-item
+    flex 300px 0 0
+    margin-bottom 32px
+    height 403px
+
+    img
+      height 174px
+
+    &__inner
+      padding 25px 24px 0
+
+    &__price
+      margin-bottom 24px
+      font 34px 'RCB'
+
+      span
+        font 34px 'RCB'
+        color textColor
+        text-transform none

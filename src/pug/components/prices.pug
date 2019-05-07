@@ -13,5 +13,7 @@ block prices
               .prices-item__price
                 = val.price
                 |
-                | руб.#{val.perfloor ? '/этаж' : ''}
+                | руб.
+                if val.perfloor
+                  span /этаж
               a(href="#order" class="prices-item__btn") Заказать
